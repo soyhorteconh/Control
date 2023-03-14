@@ -31,7 +31,7 @@ w = 2 * pi * f
 w, mag, phase = signal.bode(sys,w)
 
 plt.figure()
-plt.semilogx(w, mag)    # Bode magnitude plot
+plt.semilogx(w/(2*pi), mag)    # Bode magnitude plot
 plt.title("Bode magnitude plot")
 plt.grid(which='both', axis='both')
 plt.ylim([-60, 3])

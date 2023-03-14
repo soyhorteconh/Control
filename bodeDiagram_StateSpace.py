@@ -37,7 +37,7 @@ plt.grid(which='both', axis='both')
 plt.ylim([-60, 3])
 
 plt.figure()
-plt.semilogx(w, phase)  # Bode phase plot
+plt.semilogx(w/(2*pi), phase)  # Bode phase plot
 plt.title("Bode phase plot")
 plt.grid(which='both', axis='both')
 

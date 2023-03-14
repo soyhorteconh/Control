@@ -30,7 +30,7 @@ C = np.array([1, 0, 0, 0])
 D = np.array([0])
 
 sys = signal.StateSpace(A ,B, C, D)
-f = logspace(-2, 2)
+f = logspace(-2, 2, 1000)
 w = 2 * pi * f
 w, mag, phase = signal.bode(sys,w)
 
@@ -40,7 +40,7 @@ plt.title("Bode magnitude plot")
 plt.xlabel("Frequency [Hz]")
 plt.ylabel("Magnitude [db]")
 plt.grid(which='both', axis='both')
-plt.ylim([-60, 3])
+plt.ylim([-80, 3])
 
 plt.figure()
 plt.semilogx(w/(2*pi), phase)  # Bode phase plot

@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+
+# Author: Hortencia Alejandra Ramírez Vázquez
+# A01750150
+
 from scipy import signal
 import matplotlib.pyplot as plt
 import numpy as np
@@ -33,12 +37,16 @@ w, mag, phase = signal.bode(sys,w)
 plt.figure()
 plt.semilogx(w/(2*pi), mag)    # Bode magnitude plot
 plt.title("Bode magnitude plot")
+plt.xlabel("Frequency [Hz]")
+plt.ylabel("Magnitude [db]")
 plt.grid(which='both', axis='both')
 plt.ylim([-60, 3])
 
 plt.figure()
 plt.semilogx(w/(2*pi), phase)  # Bode phase plot
 plt.title("Bode phase plot")
+plt.xlabel("Frequency [Hz]")
+plt.ylabel("Phase [degrees]")
 plt.grid(which='both', axis='both')
 
 plt.show()
